@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'ObjectMapping' do |os|
     os.source_files   = 'Code/ObjectMapping.h', 'Code/ObjectMapping/**/*'
-    os.dependency       'RestKit/Support'
     os.dependency       'RKValueTransformers', '~> 1.1.0'
     os.dependency       'ISO8601DateFormatterValueTransformer', '~> 0.6.1'
     os.private_header_files = 'Code/ObjectMapping/**/*_Private.h'
@@ -39,7 +38,6 @@ Pod::Spec.new do |s|
     ns.osx.frameworks = 'CoreServices', 'Security', 'SystemConfiguration'
     ns.dependency       'SOCKit'
     ns.dependency       'RestKit/ObjectMapping'
-    ns.dependency       'RestKit/Support'
   end
 
   s.subspec 'CoreData' do |cdos|
@@ -62,6 +60,5 @@ Pod::Spec.new do |s|
   s.subspec 'CocoaLumberjack' do |cl|
     cl.source_files = 'Code/CocoaLumberjack/RKLumberjackLogger.*'
     cl.dependency 'CocoaLumberjack'
-    cl.dependency 'RestKit/Support'
   end
 end
