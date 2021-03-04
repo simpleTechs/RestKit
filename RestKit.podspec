@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.subspec 'ObjectMapping' do |os|
     os.source_files   = 'Code/ObjectMapping.h', 'Code/ObjectMapping/**/*'
     os.dependency       'RestKit/Support'
-    cs.dependency 'RestKit/External'
+    os.dependency 'RestKit/External'
     os.private_header_files = 'Code/ObjectMapping/**/*_Private.h'
   end
 
@@ -40,32 +40,32 @@ Pod::Spec.new do |s|
     ns.dependency       'SOCKit'
     ns.dependency       'RestKit/ObjectMapping'
     ns.dependency       'RestKit/Support'
-    cs.dependency 'RestKit/External'
+    ns.dependency 'RestKit/External'
   end
 
   s.subspec 'CoreData' do |cdos|
     cdos.source_files = 'Code/CoreData.h', 'Code/CoreData/**/*'
     cdos.frameworks   = 'CoreData'
     cdos.dependency 'RestKit/ObjectMapping'
+    cdos.dependency 'RestKit/External'
     cdos.private_header_files = 'Code/CoreData/**/*_Private.h'
-    cs.dependency 'RestKit/External'
   end
 
   s.subspec 'Testing' do |ts|
     ts.source_files = 'Code/Testing.h', 'Code/Testing'
     ts.dependency 'RestKit/Network'
-    cs.dependency 'RestKit/External'
+    ts.dependency 'RestKit/External'
   end
 
   s.subspec 'Search' do |ss|
     ss.source_files   = 'Code/Search.h', 'Code/Search'
     ss.dependency 'RestKit/CoreData'
-    cs.dependency 'RestKit/External'
+    ss.dependency 'RestKit/External'
   end
 
   s.subspec 'Support' do |ss|
     ss.source_files   = 'Code/RestKit.h', 'Code/Support.h', 'Code/Support'
-    cs.dependency 'RestKit/External'
+    ss.dependency 'RestKit/External'
   end
 
   s.subspec 'CocoaLumberjack' do |cl|
