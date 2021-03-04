@@ -38,7 +38,6 @@ Pod::Spec.new do |s|
     ns.dependency       'SOCKit'
     ns.dependency       'RestKit/ObjectMapping'
     ns.dependency       'RestKit/Support'
-    ns.dependency 'RestKit/External'
   end
 
   s.subspec 'CoreData' do |cdos|
