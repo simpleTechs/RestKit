@@ -46,7 +46,6 @@ Pod::Spec.new do |s|
     cdos.source_files = 'Code/CoreData.h', 'Code/CoreData/**/*'
     cdos.frameworks   = 'CoreData'
     cdos.dependency 'RestKit/ObjectMapping'
-    cdos.dependency 'RestKit/External'
     cdos.private_header_files = 'Code/CoreData/**/*_Private.h'
   end
 
