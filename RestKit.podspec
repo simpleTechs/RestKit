@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
   s.subspec 'ObjectMapping' do |os|
     os.source_files   = 'Code/ObjectMapping.h', 'Code/ObjectMapping/**/*'
     os.dependency       'RestKit/Support'
-    os.dependency 'RestKit/External'
     os.private_header_files = 'Code/ObjectMapping/**/*_Private.h'
   end
 
