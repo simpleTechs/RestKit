@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
     cs.dependency 'RestKit/ObjectMapping'
     cs.dependency 'RestKit/Network'
     cs.dependency 'RestKit/CoreData'
-    cs.dependency 'RestKit/External'
   end
 
   s.subspec 'ObjectMapping' do |os|
