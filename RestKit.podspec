@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
     cs.dependency 'RestKit/ObjectMapping'
     cs.dependency 'RestKit/Network'
     cs.dependency 'RestKit/CoreData'
+    cs.dependency 'RestKit/External'
   end
 
   s.subspec 'ObjectMapping' do |os|
@@ -67,5 +68,9 @@ Pod::Spec.new do |s|
     cl.source_files = 'Code/CocoaLumberjack/RKLumberjackLogger.*'
     cl.dependency 'CocoaLumberjack'
     cl.dependency 'RestKit/Support'
+  end
+
+  s.subspec 'External' do |ex|
+    ex.source_files = 'Code/External/*'
   end
 end
