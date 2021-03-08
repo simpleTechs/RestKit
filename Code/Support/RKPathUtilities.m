@@ -22,6 +22,9 @@ NSString *RKExecutableName(void);
 
 NSString *RKApplicationDataDirectory(void)
 {
+#if TARGET_OS_TV
+    return NSTemporaryDirectory();
+#endif
 #if TARGET_OS_IPHONE
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     return ([paths count] > 0) ? paths[0] : nil;
